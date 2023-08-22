@@ -14,7 +14,8 @@ class Sanjana
             { 
             System.out.print("0");
             }
-       
+        System.out.print(count + " ");
+        count++;
         }
     System.out.println();
     }
