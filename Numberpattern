@@ -4,14 +4,24 @@ class Sanjana
     {
     int i;
     int j;
+    int count=1;
     int n=5;
     for(i=1; i<=n; i++)
     {
-        for(j=1; j<=i; j++)
-        {
-                System.out.print(i + " ");
-        }
+            if(i%2==0)
+            {
+                System.out.print(i+1 + " ");
+            }
+            for(j=1; j<=n; j++)
+            {
+                    System.out.print(i + " ");
+            }    
+            if(i%2!=0)
+            {
+                System.out.print(i+1 + " ");
+            }
     System.out.println();
     }
+    
     }
 }
