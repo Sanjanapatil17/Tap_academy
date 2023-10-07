@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main {
+  static String isPrime(int n){
+    int count=0;
+    for(int i=2 ; i*i<=n ; i++){
+      if(n%i==0){
+        return "No";
+      }
+    }
+    return "Yes";
+  }
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int n = scanner.nextInt();
+    // Write your code here
+    String result =isPrime(n);
+    System.out.println(result);
+  }
+}
