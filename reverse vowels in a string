@@ -1,0 +1,39 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        System.out.println(reverseString(input));
+    }
+
+    public static String reverseString(String input)
+    {
+       char[] arr = input.toCharArray();
+        int left = 0, right = arr.length - 1;
+        while (left < right)
+        {
+            if (isVowel(arr[left]) && isVowel(arr[right])) {
+                char temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            } else if (!isVowel(arr[left])) {
+                left++;
+            } else if (!isVowel(arr[right])) {
+                right--;
+            }
+        }
+        return new String(arr);
+    }
+    private static boolean isVowel(char ch) {
+        return "aeiouAEIOU".indexOf(ch) != -1;
+    }
+}
+
+
+
+
